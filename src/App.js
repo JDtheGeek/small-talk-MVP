@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import Navbar from './components/layout/Navbar'
 
 
 
@@ -7,7 +8,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Small Talk</h1>
+        <Navbar />
       </div>
     </Router>
   );
