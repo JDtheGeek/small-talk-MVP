@@ -1,1 +1,2 @@
-# small-talk-MVP
+# Small Talk
+Simple blog platform
