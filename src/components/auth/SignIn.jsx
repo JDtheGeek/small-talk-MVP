@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function SignIn() {
 
-  function handleChange(event) {
-    console.log(event)
+  const [signInValues, setSignInValues] = useState({
+    email: '',
+    password: ''
+  })
+
+  const handleChange = (event) => {
+    const value = event.target.value
+    const inputId = event.target.id
+    setSignInValues(prevState => {
+      return { ...prevState, [inputId]: value }
+    })
   }
 
-  function handleSubmit(event) {
-    console.log('submit:', event)
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    console.log(signInValues)
   }
 
   return (
@@ -16,11 +26,11 @@ export default function SignIn() {
         <h5 className="grey-text darken-3">Sign In</h5>
         <div className="input-field">
           <label htmlFor="email">Email</label>
-          <input type="email" name="email" id="email" onChange={handleChange} />
+          <input type="email" id="email" onChange={handleChange} />
         </div>
         <div className="input-field">
           <label htmlFor="password">Password</label>
-          <input type="password" name="password" id="password" onChange={handleChange} />
+          <input type="password" id="password" onChange={handleChange} />
         </div>
         <div className="input-field">
           <button className="btn green">Log In</button>
