@@ -11,7 +11,7 @@ const Navbar = () => {
           <ul className='right'>
             <li><NavLink to='/signup'>Sign Up</NavLink></li>
             <li><NavLink to='/signin'>Sign In</NavLink></li>
-            <li><NavLink to='/'>New Article</NavLink></li>
+            <li><NavLink to='/create'>New Article</NavLink></li>
             <li><NavLink to='/'>Log Out</NavLink></li>
             <li><NavLink to='/' className='btn btn-floating green lighten-1'>NCT</NavLink></li>
           </ul>

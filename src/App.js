@@ -5,6 +5,7 @@ import Dashboard from './components/dashboard/Dashboard'
 import Article from './components/articles/Article'
 import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
+import CreateArticle from './components/articles/CreateArticle'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route exact path='/' component={Dashboard} />
           <Route exact path='/signin' component={SignIn} />
           <Route exact path='/signup' component={SignUp} />
+          <Route exact path='/create' component={CreateArticle} />
           <Route path='/article/:id' component={Article} />
         </Switch>
       </div>
