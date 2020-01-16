@@ -8,7 +8,7 @@ export default function Article(props) {
       <div className="card">
         <div className="card-content">
           <span className="card-title">Article Title - {id}</span>
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, possimus. Amet possimus pariatur, cum deleniti itaque similique quos repellat aspernatur temporibus dolores vero ab, fugit enim voluptas alias ullam aperiam?</p>
+          <p> </p>
         </div>
         <div className="card-action">
           <div>Author</div>

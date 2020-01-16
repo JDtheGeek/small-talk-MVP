@@ -18,7 +18,7 @@ export default function App() {
           <Route exact path='/signin' component={SignIn} />
           <Route exact path='/signup' component={SignUp} />
           <Route exact path='/create' component={CreateArticle} />
-          <Route path='/article/:id' component={Article} />
+          <Route path='/articles/:id' component={Article} />
         </Switch>
       </div>
     </BrowserRouter>
