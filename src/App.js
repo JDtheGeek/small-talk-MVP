@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Dashboard from './components/dashboard/Dashboard'
@@ -7,7 +7,8 @@ import SignIn from './components/auth/SignIn'
 import SignUp from './components/auth/SignUp'
 import CreateArticle from './components/articles/CreateArticle'
 
-function App() {
+
+export default function App() {
   return (
     <BrowserRouter>
       <div className="App">
@@ -23,5 +24,3 @@ function App() {
     </BrowserRouter>
   );
 }
-
-export default App;

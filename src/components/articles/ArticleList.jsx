@@ -1,15 +1,15 @@
 import React from 'react'
 import ArticleSummary from './ArticleSummary'
 
-const ArticleList = () => {
+
+export default function ArticleList({ articles }) {
   return (
     <div className="project-list section">
-      <ArticleSummary />
-      <ArticleSummary />
-      <ArticleSummary />
-
+      {articles && articles.map(article => {
+        return (
+          <ArticleSummary article={article} key={article.id} />
+        )
+      })}
     </div>
   )
 }
-
-export default ArticleList

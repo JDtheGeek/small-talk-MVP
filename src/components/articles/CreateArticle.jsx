@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import ImageUpload from './FileUpload'
 
 export default function CreateArticle() {
 
@@ -11,8 +12,9 @@ export default function CreateArticle() {
   const handleChange = (event) => {
     const value = event.target.value
     const inputId = event.target.id
+    const files = event.target.files
     setState(prevState => {
-      return { ...prevState, [inputId]: value }
+      return { ...prevState, [inputId]: value, }
     })
   }
 
@@ -33,6 +35,9 @@ export default function CreateArticle() {
         <div className="input-field">
           <label htmlFor="content">Text</label>
           <textarea id="content" className="materialize-textarea" onChange={handleChange} ></textarea>
+        </div>
+        <div>
+          <ImageUpload onChange={handleChange} />
         </div>
         <div className="input-field">
           <button className="btn green">Create</button>
