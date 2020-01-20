@@ -7,6 +7,13 @@ const initState = {
 }
 
 const articleReducer = (state = initState, action) => {
+  switch (action.type) {
+    case 'CREATE_ARTICLE':
+      console.log('Created article: ', action.article)
+      break
+    default:
+      break
+  }
   return state
 }
 

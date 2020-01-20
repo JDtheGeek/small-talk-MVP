@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { connect } from 'react-redux'
 import ImageUpload from './FileUpload'
+import { createArticle } from '../../redux/actions/articleActions'
 
-export default function CreateArticle() {
+function CreateArticle(props) {
 
   const [state, setState] = useState({
     title: '',
@@ -12,15 +14,15 @@ export default function CreateArticle() {
   const handleChange = (event) => {
     const value = event.target.value
     const inputId = event.target.id
-    const files = event.target.files
     setState(prevState => {
-      return { ...prevState, [inputId]: value, }
+      return { ...prevState, [inputId]: value }
     })
   }
 
   const handleSubmit = (event) => {
     event.preventDefault()
     console.log(state)
+    props.createArticle(state)
   }
 
   return (
@@ -46,3 +48,11 @@ export default function CreateArticle() {
     </div>
   )
 }
+
+function mapDispatchToProps(dispatch) {
+  return {
+    createArticle: (article) => dispatch(createArticle(article))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(CreateArticle)
