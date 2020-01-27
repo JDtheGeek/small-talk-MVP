@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import { connect } from 'react-redux'
 import ImageUpload from './FileUpload'
-import { createArticle } from '../../redux/actions/articleActions'
 
-function CreateArticle(props) {
+export default function CreateArticle(props) {
 
   const [state, setState] = useState({
     title: '',
@@ -48,11 +46,3 @@ function CreateArticle(props) {
     </div>
   )
 }
-
-function mapDispatchToProps(dispatch) {
-  return {
-    createArticle: (article) => dispatch(createArticle(article))
-  }
-}
-
-export default connect(null, mapDispatchToProps)(CreateArticle)

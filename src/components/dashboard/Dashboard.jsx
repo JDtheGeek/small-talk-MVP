@@ -1,9 +1,9 @@
 import React from 'react'
 import Notifications from './Notifications'
 import ArticleList from '../articles/ArticleList'
-import { connect } from 'react-redux'
 
-function Dashboard(props) {
+
+export default function Dashboard(props) {
   return (
     <div className="dashboard container">
       <div className="row">
@@ -17,11 +17,3 @@ function Dashboard(props) {
     </div>
   )
 }
-
-function mapStateToProps(state) {
-  return {
-    articles: state.article.articles
-  }
-}
-
-export default connect(mapStateToProps)(Dashboard)
